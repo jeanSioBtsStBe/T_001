@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T_001</title>
+    <script type="text/javascript" src="./app.js" async></script>
+</head>
+<body>
+
+<form id="emailForm" action="./process.php" method="POST">
+
+    <div>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" value="Garneret" required>
+    </div>
+
+    <div>
+        <label for="firstName">Prénom</label>
+        <input type="text" id="firstName" name="firstName" value="Alexandre" required>
+    </div>
+
+    <div>
+        <label for="mail">Adresse e-mail</label>
+        <input type="email" id="mail" name="mail" value="garneret.alexandre@hotmail.fr" required>
+    </div>
+
+    <div>
+        <label for="society">Société</label>
+        <input type="text" id="society" name="society" value="Docolab" required>
+    </div>
+
+    <div>
+        <label for="message">Votre message :</label>
+        <textarea name="message" id="message" cols="30" rows="10" required>Bonjour, je souhaiterais prendre contact avec vous pour connaitre les services que vous proposez.</textarea>
+    </div>
+
+    <button type="submit">Envoyer</button>
+
+</form>
+</body>
+</html>
