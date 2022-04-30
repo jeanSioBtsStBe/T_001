@@ -27,9 +27,9 @@ function postData(formattedFormData) {
     })
         .then(function (value) {
             console.log(value);
-            console.log(value['status']);
+            console.log(value['code'] + " " + value['status']);
 
-            if (value['status'] === "200") {
+            if (value['code'] === "200") {
                 resetForm(form);
                 success.textContent = "Message bien envoyé";
                 show(success)
@@ -38,7 +38,7 @@ function postData(formattedFormData) {
                 }, 3000);
             } else {
                 document.body.prepend(error);
-                error.textContent = "Erreur sur le champ " + value['field'];
+                error.textContent = value['status'];
                 show(error)
                 setTimeout(() => {
                     hide(error);
